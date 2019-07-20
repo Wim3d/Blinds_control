@@ -1,0 +1,9 @@
+sitemap blinds label="Blinds"
+{
+
+	Frame label="Side window"
+	{
+		Slider item=Blinds_side
+    	Selection item=Blinds_side mappings=["20"="20%", "50"="50%", "80"="80%"]
+	}
+}
