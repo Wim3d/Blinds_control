@@ -1,0 +1,6 @@
+rule "TV scene, close blinds"
+when
+	Item powerSony received command ON
+then
+	sendCommand(Blinds_side, 80)
+end
