@@ -1,0 +1,1 @@
+Dimmer Blinds_side	"Blinds Side window [%d]"	<rollershutter> [ "Lighting" ]	{mqtt=">[mosquitto:blinds/side/percentage:command:*:default]"}
