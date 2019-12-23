@@ -10,7 +10,9 @@
 #include <ESP8266mDNS.h>
 #include <ESP8266WebServer.h>
 #include <ESP8266HTTPUpdateServer.h>
-#include <credentials.h>
+
+#define mySSID "put your WiFi network here"
+#define myPASSWORD "put your WiFi password here"
 
 #define OPEN_STEPS 400
 #define CENTER_STEPS 2000
@@ -29,6 +31,8 @@ const char* software_version = "version 4";
 const char* mqtt_id = "Blinds_Control_side";
 const char* percentage_topic = "blinds/side/percentage";
 const char* debug_topic = "blinds/side/debug";
+const char* mqtt_server = "192.168.10.104";
+
 
 long lastReconnectAttempt;
 
