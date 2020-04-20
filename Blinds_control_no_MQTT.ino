@@ -23,7 +23,7 @@
 const char* host = "Blinds_control_side";
 ESP8266WebServer httpServer(80);
 ESP8266HTTPUpdateServer httpUpdater;
-const char* software_version = "version 6";
+const char* software_version = "version 6 no MQTT";
 
 /*credentials & definitions */
 #define mySSID "put your WiFi network here"
