@@ -57,10 +57,10 @@ void setup() {
   pinMode(stepPin, OUTPUT);
   pinMode(dirPin, OUTPUT);
   pinMode(powerPin, OUTPUT);
-
+  WiFi.mode(WIFI_STA);
   digitalWrite(powerPin, HIGH); // disable the stepper motor
+  //connect to WiFi
   setup_wifi();
-  digitalWrite(powerPin, HIGH); // disable the stepper motor
   // for HTTPudate
   MDNS.begin(host);
   httpUpdater.setup(&httpServer);
