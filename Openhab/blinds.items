@@ -1,1 +1,10 @@
+//For an Openhab set-up using version 1.x of the MQTT binding. 
+//The [ "Lighting" ] is for the Google Assistant integration
+// In my set-up the "blinds/side/percentage" is the topic on the MQTT server to which the blinds controller (ESP) is subscribed.
 Dimmer Blinds_side	"Blinds Side window [%d]"	<rollershutter> [ "Lighting" ]	{mqtt=">[mosquitto:blinds/side/percentage:command:*:default]"}
+
+//For an Openhab set-up using version 2.x or 3.x of the MQTT binding. 
+//The ga="Light" is for the Google Assistant (ga) integration
+//In my set-up the "mqtt:topic:mosquitto:Blinds_side:Percentage" is the channel I created for the MQTT-thing. 
+//In this channel the topic "blinds/side/percentage" is defined as the topic on the MQTT server to which the blinds controller (ESP) is subscribed.
+Dimmer Blinds_side	"Blinds Side window [%d]"		<rollershutter> 				{channel="mqtt:topic:mosquitto:Blinds_side:Percentage", ga="Light"}
